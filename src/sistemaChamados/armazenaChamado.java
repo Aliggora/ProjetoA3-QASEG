@@ -14,16 +14,15 @@ public class armazenaChamado {
         chamados.add(chamado);
     }
 
-    public Chamado getChamado(int codigo) {
-        for (Chamado chamado : chamados) {
-            if (chamado.getCodigo() == codigo) {
-                return chamado;
-            }
-        }
-        return null;
-    }
-
     public List<Chamado> getChamados() {
         return chamados;
+    }
+
+    public void listarChamados() {
+        for (Chamado chamado : chamados) {
+            System.out.println("Tipo: " + chamado.getTipoChamado());
+            System.out.println("Descrição: " + chamado.getDescricao());
+            System.out.println("-----------------------");
+        }
     }
 }
