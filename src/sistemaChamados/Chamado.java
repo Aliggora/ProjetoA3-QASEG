@@ -1,16 +1,16 @@
 package sistemaChamados;
 
 public class Chamado {
-    private String tipoChamado;
+    private String tipo;
     private String descricao;
 
-    public Chamado(String tipoChamado, String descricao) {
-        this.tipoChamado = tipoChamado;
+    public Chamado(String tipo, String descricao) {
+        this.tipo = tipo;
         this.descricao = descricao;
     }
 
-    public String getTipoChamado() {
-        return tipoChamado;
+    public String getTipo() {
+        return tipo;
     }
 
     public String getDescricao() {

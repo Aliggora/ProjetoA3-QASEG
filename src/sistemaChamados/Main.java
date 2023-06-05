@@ -1,12 +1,16 @@
 package sistemaChamados;
 
+import java.util.List;
+
 public class Main {
-
     public static void main(String[] args) {
-        armazenaChamado armazenaChamado = new armazenaChamado();
-        criarChamado criarChamado = new criarChamado(armazenaChamado);
+        // Carregar chamados existentes
+        List<Chamado> chamados = ArmazenaChamado.carregarChamados();
 
-        criarChamado.criarChamado();
-        armazenaChamado.listarChamados();
+        ArmazenaChamado.salvarChamados(chamados);
+
+        // Iniciar a interface de abertura de chamados
+        CriarChamado criarChamado = new CriarChamado();
+        criarChamado.show();
     }
 }
